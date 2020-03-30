@@ -1,0 +1,212 @@
+.header {
+    &__navigation {
+        @include respond-768 {
+            position: relative;
+        }
+    }
+
+    // EMAIL LOGO ON TOP STYLE
+    &__email {
+        width: 30px;
+        fill: $black;
+        position: absolute;
+        top: -40px;
+        left: 48px;
+        z-index: 3001;
+
+        @include respond-768 {
+            position: fixed;
+            top: 15px;
+            left: 30px;
+        }
+
+        @include respond-480 {
+            left: 20px;
+        }
+    }
+
+    &__socials-list {
+        display: flex;
+        flex-direction: column;;
+        -webkit-box-align: center;
+        align-items: center;
+
+        position: fixed;
+        top: 50%;
+        right: -27px;
+        transform: translate(-50%, -50%);
+        z-index: 3000;
+
+        @include respond-768 {
+            flex-direction: row;
+            top: 30px;
+            right: -77px;
+        }
+
+        @include respond-480 {
+            right: -87px;
+        }
+    }
+
+    &__link {
+        padding: .7rem;
+        display: flex;
+        color: $black;
+        transition: all .5s;
+
+        @include respond-768 {
+            padding: .7rem 0 .7rem 1.5rem;
+        }
+    }
+
+    &__icon {
+        font-size: 1.3rem;
+        transform: scale(.98);
+        transition: all .7s;
+
+        &:hover,
+        &:focus {
+            color: $accent-color;
+            transform: scale(1.2);
+
+            @include respond-768 {
+                transform: scale(.98);
+            }
+        }
+    }
+    
+    &__center {
+        margin: 2.5rem;
+        background-color: $accent-color;
+
+        @include respond-768 {
+            margin: 1.5rem;
+        }
+
+        @include respond-480 {
+            margin-left: 1rem;
+            margin-right: 1rem;
+        }
+    }
+
+    &__main {
+        width: 100%;
+        height: calc(100vh - 5rem);
+        display: grid;
+        grid-column: 2/-1;
+        grid-row: 1/-1;
+        justify-content: center;
+
+        @include respond-768 {
+            // height: 450pxs
+        }
+    }
+    
+    &__content {
+        width: 100%;
+        align-self: center;
+        grid-column: 1/-1;
+        grid-row: 1/-1;
+        justify-self: center;
+
+        @include respond-768 {
+            margin-top: 0
+        }
+    }
+    
+    &__heading {
+        font-family: $font-primary;
+        font-size: 6rem;
+        text-transform: lowercase;
+        text-align: left;
+        display: block;
+        color: $white;
+        width: 100%;
+
+        @include respond-1110 {
+            font-size: 5rem;
+        }
+
+        @include respond-950 {
+            font-size: 4.5rem;
+        }
+
+        @include respond-768 {
+            font-size: 3.5rem;
+        }
+
+        @include respond-590 {
+            font-size: 2.8rem;
+        }
+
+        @include respond-480 {
+            font-size: 2.2rem;
+        }
+    }
+    
+    &__heading--top-text2 {
+        display: block;
+    }
+    &__heading--small {
+        font-family: $font-secondary;
+        font-size: 1.4rem;
+        text-transform: uppercase;
+        padding-top: 20px;
+
+        @include respond-1110 {
+            font-size: 1.2rem;
+        }
+
+        @include respond-950 {
+            font-size: 1rem;
+        }
+
+        @include respond-768 {
+            font-size: .8rem;
+        }
+
+        @include respond-590 {
+            font-size: .7rem;
+        }
+
+        @include respond-480 {
+            font-size: .6rem;
+        }
+    }
+}
+
+.header {
+
+    @include respond-768 {
+
+        &__topside {
+            width: 100%;
+            background-color: $white;
+            height: 3rem;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 2000;
+        }
+    }
+}
+
+#top {
+    position: fixed;
+    bottom: 10px;
+    left: 35px;
+    display: none;
+    z-index: 999;
+    cursor: pointer;
+    background-color: transparent;
+    color: $black;
+    font-size: 1.5rem;
+
+    @include respond-768 {
+        left: 15px;
+    }
+
+    @include respond-480 {
+        opacity: 0;
+    }
+}

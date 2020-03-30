@@ -1,0 +1,54 @@
+.footer {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    background-color: lighten($accent-color, $amount: 10%);
+    background-image: url(../assets/bg-pattern.png);
+    clip-path: polygon(0 40%, 100% 0, 100% 100%, 0 100%);
+    padding: .8rem;
+    display: flex;
+    flex-direction: column;
+    font-family: $font-tertiary;
+    font-weight: 500;
+    font-size: 1rem;
+
+    @include respond-590 {
+        padding-bottom: .3rem;
+    }
+
+    &__text {
+        font-size: .9rem;
+        color: $white;
+        text-align: right;
+        display: inline-block;
+        
+        @include respond-590 {
+            font-size: .7rem;
+        }
+
+        @include respond-480 {
+            text-align: center;
+        }
+
+        @include respond-480 {
+            font-size: .7rem;
+        }
+    }
+
+    &__text--one {
+        padding: 1rem 0 .3rem 0;
+    }
+
+    &__text--two {
+        font-size: .7rem;
+
+        @include respond-590 {
+            font-size: .6rem;
+        }
+
+        @include respond-480 {
+            display: none;
+        }
+    }
+}

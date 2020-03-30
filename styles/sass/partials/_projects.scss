@@ -1,0 +1,310 @@
+
+.projects {
+    margin-top: 10rem;
+    background-image: url(../assets/bg-pattern.png);
+
+    &__header {
+        position: relative;
+    }
+    &__heading {
+        font-family: $font-primary;
+        color: $white;
+        -webkit-text-fill-color: $white;
+        -webkit-text-stroke-width: 2px;
+        -webkit-text-stroke-color: $accent-color;
+        font-size: 6rem;
+        text-transform: lowercase;
+        position: absolute;
+        top: -85px;
+        right: -10px;
+        border: 1px solid;
+
+        @include respond-950 {
+            font-size: 5rem;
+            top: -70px;
+        }
+
+        @include respond-768 {
+            font-size: 3.5rem;
+            top: -50px;
+        }
+
+        @include respond-590 {
+            font-size: 2.8rem;
+            top: -40px;
+        }
+    }
+
+    &__container {
+        padding: 150px 0;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-column-gap: 3rem;
+        grid-row-gap: 10rem;
+        -webkit-box-align: center;
+        align-items: center;
+
+        @include respond-1250 {
+            grid-column-gap: 2rem;
+        }
+
+        @include respond-1110 {
+            grid-column-gap: 1rem;
+        }
+
+        @include respond-860 {
+            grid-template-columns: 1fr;
+            grid-row-gap: 5rem;
+        }
+    }
+
+    &__project {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    &__info {
+        height: 100%;
+        line-height: 1.6;
+        padding: 2rem;
+        z-index: 1;
+        display: grid;
+        align-content: center;
+
+        @include respond-1250 {
+            padding: 1rem;
+        }
+
+        @include respond-1110 {
+            padding: 0;
+        }
+    }
+
+    &__heading-box {
+        display: flex;
+        -webkit-box-align: end;
+        align-items: flex-end;
+        margin-bottom: .7rem;
+    }
+
+    &__sub-heading,
+    &__description,
+    &__item {
+        color: $black;
+    }
+
+    &__sub-heading {
+        font-family: $font-secondary;
+        text-transform: uppercase;
+        font-weight: bolder;
+        font-size: 1.4rem;
+        letter-spacing: 3px;
+        text-align: left;
+        margin: 0;
+        color: $accent-color;
+
+        @include respond-950 {
+            font-size: 1.2rem;
+        }
+
+        @include respond-860 {
+            font-size: 1.4rem;
+        }
+
+        @include respond-590 {
+            font-size: 1.2rem
+        }
+
+        @include respond-480 {
+            font-size: 1.15rem;
+        }
+
+        @include respond-400 {
+            font-size: 1.1rem;
+            margin: 0 auto;
+        }
+    }
+
+    &__description {
+        font-family: $font-tertiary;
+        font-size: 1.1rem;
+        line-height: 1.6;
+        margin-bottom: 1rem;
+
+        @include respond-950 {
+            font-size: 1rem;
+        }
+
+        @include respond-860 {
+            font-size: 1.2rem;
+        }
+
+        @include respond-590 {
+            font-size: 1rem
+        }
+
+        @include respond-400 {
+            text-align: center;
+        }
+    }
+
+    &__list {
+        display: flex;
+        flex-wrap: wrap;
+
+        @include respond-400 {
+            justify-content: center;
+        }
+    }
+
+    &__item {
+        font-family: $font-tertiary;
+        font-size: .8rem;
+        font-weight: 600;
+        border-radius: 7px;
+
+        @include respond-950 {
+            font-size: .7rem
+        }
+
+        @include respond-860 {
+            font-size: .9rem
+        }
+
+        @include respond-590 {
+            font-size: .7rem
+        }
+    }
+
+    &__item-divider {
+        margin: 0 .3rem;
+        color: $accent-color;
+    }
+
+    &__links-item:not(:last-child) {
+        margin-right:1rem;
+    }
+
+    &__link {
+        font-family: $font-secondary;
+        font-size: .8rem;
+        font-weight: 600;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        padding: .5rem 1.5rem;
+        border-radius: 50px;
+        background-color: lighten($accent-color, $amount: 10%);
+        color: $white;
+        display: block;
+        transform: scale(0.98);
+        transition: all .7s;
+        position: relative;
+        display: flex;
+        margin: 1rem 0 0 ;
+
+        @include respond-950 {
+            font-size: .6rem;
+        }
+
+        @include respond-860 {
+            font-size: .8rem;
+        }
+
+        @include respond-590 {
+            font-size: .6rem
+        }
+
+        @include respond-400 {
+            padding: .5rem .6rem;
+        }
+
+        &:hover,
+        &:focus {
+            background-color: $accent-color;
+            transform: scale(1.05);
+        }
+    }
+
+    &__link--border {
+        display: block;
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        top: 12%;
+        left: 1.5%;
+        border-radius: 100px;
+        border: 2px solid $accent-color;
+        transition: all .4s;
+    }
+}
+
+.projects__link:hover .projects__link--border,
+.projects__link:focus .projects__link--border {
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+}
+
+.projects {
+
+    @include respond-860 {
+
+        &__voting-app {
+            order: 1;
+        }
+
+        &__voting-app1 {
+            order: 2;
+        }
+
+        &__music-app {
+            order: 3;
+        }
+
+        &__music-app1 {
+            order: 4;
+        }
+
+        &__film-club {
+            order: 5;
+        }
+
+        &__film-club1 {
+            order: 6;
+        }
+
+        &__match-me {
+            order: 7;
+        }
+
+        &__match-me1 {
+            order: 8;
+        }
+
+        &__shoe-kloset {
+            order: 9;
+        }
+
+        &__shoe-kloset1 {
+            order: 10;
+        }
+
+        &__voting-app1,
+        &__music-app1,
+        &__film-club1,
+        &__match-me1 {
+            border-bottom: 2px solid $accent-color;
+            padding-bottom: 100px;
+        }
+    }
+}
+
+@include respond-400 {
+    .match-me {
+        text-align: center;
+    }
+}
+
