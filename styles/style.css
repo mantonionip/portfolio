@@ -526,13 +526,13 @@ textarea {
         -ms-flex-direction: row;
             flex-direction: row;
     top: 30px;
-    right: -77px;
+    right: -50px;
   }
 }
 
 @media (max-width: 480px) {
   .header__socials-list {
-    right: -87px;
+    right: -62px;
   }
 }
 
@@ -1255,37 +1255,37 @@ span.dot {
         -ms-flex-order: 4;
             order: 4;
   }
-  .projects__film-club {
+  .projects__expensify {
     -webkit-box-ordinal-group: 6;
         -ms-flex-order: 5;
             order: 5;
   }
-  .projects__film-club1 {
+  .projects__expensify1 {
     -webkit-box-ordinal-group: 7;
         -ms-flex-order: 6;
             order: 6;
   }
-  .projects__match-me {
+  .projects__film-club {
     -webkit-box-ordinal-group: 8;
         -ms-flex-order: 7;
             order: 7;
   }
-  .projects__match-me1 {
+  .projects__film-club1 {
     -webkit-box-ordinal-group: 9;
         -ms-flex-order: 8;
             order: 8;
   }
-  .projects__shoe-kloset {
+  .projects__cinema-ritrovato {
     -webkit-box-ordinal-group: 10;
         -ms-flex-order: 9;
             order: 9;
   }
-  .projects__shoe-kloset1 {
+  .projects__cinema-ritrovato1 {
     -webkit-box-ordinal-group: 11;
         -ms-flex-order: 10;
             order: 10;
   }
-  .projects__voting-app1, .projects__music-app1, .projects__film-club1, .projects__match-me1 {
+  .projects__voting-app1, .projects__music-app1, .projects__expensify1, .projects__film-club1 {
     border-bottom: 2px solid #024EFC;
     padding-bottom: 100px;
   }
@@ -1433,6 +1433,10 @@ span.dot {
   }
 }
 
+.skills img.php {
+  padding-top: 20px;
+}
+
 .skills__type {
   display: inline-block;
   font-family: "Karla", sans-serif;
@@ -1450,6 +1454,10 @@ span.dot {
 
 .skills__type-span {
   display: block;
+}
+
+.skills__icon--img .php {
+  margin-top: 20px;
 }
 
 .contact {

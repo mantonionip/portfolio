@@ -1,121 +1,127 @@
 .skills {
-    background-color: $secondary-color;
-    background-image: url(../assets/bg-pattern.png);
-    margin-top: 10rem;
+	background-color: $secondary-color;
+	background-image: url(../assets/bg-pattern.png);
+	margin-top: 10rem;
 
-    &__header {
-        position: relative;
-    }
+	&__header {
+		position: relative;
+	}
 
-    &__heading {
-        font-family: $font-primary;
-        color: $white;
-        -webkit-text-fill-color: $white;
-        -webkit-text-stroke-width: 2px;
-        -webkit-text-stroke-color: $accent-color;
-        font-size: 6rem;
-        text-transform: lowercase;
-        position: absolute;
-        top: -85px;
-        left: -10px;
+	&__heading {
+		font-family: $font-primary;
+		color: $white;
+		-webkit-text-fill-color: $white;
+		-webkit-text-stroke-width: 2px;
+		-webkit-text-stroke-color: $accent-color;
+		font-size: 6rem;
+		text-transform: lowercase;
+		position: absolute;
+		top: -85px;
+		left: -10px;
 
-        @include respond-950 {
-            font-size: 5rem;
-            top: -75px;
-        }
+		@include respond-950 {
+			font-size: 5rem;
+			top: -75px;
+		}
 
-        @include respond-768 {
-            font-size: 3.5rem;
-            top: -50px;
-        }
+		@include respond-768 {
+			font-size: 3.5rem;
+			top: -50px;
+		}
 
-        @include respond-590 {
-            font-size: 2.8rem;
-            top: -40px;
-        }
-    }
+		@include respond-590 {
+			font-size: 2.8rem;
+			top: -40px;
+		}
+	}
 
-    &__container {
-        padding: 100px 0;
-        display: grid;
-        grid-template-columns: repeat(4, 1fr);
-        justify-items: center;
-        grid-row-gap: 3rem;
+	&__container {
+		padding: 100px 0;
+		display: grid;
+		grid-template-columns: repeat(4, 1fr);
+		justify-items: center;
+		grid-row-gap: 3rem;
 
-        @include respond-1650 {
-            grid-template-columns: repeat(5, 1fr);
-        }
+		@include respond-1650 {
+			grid-template-columns: repeat(5, 1fr);
+		}
 
-        @include respond-1110 {
-            grid-template-columns: repeat(3, 1fr);
-        }
+		@include respond-1110 {
+			grid-template-columns: repeat(3, 1fr);
+		}
 
-        @include respond-590 {
-            grid-template-columns: repeat(2, 1fr);
-        }
-    }
+		@include respond-590 {
+			grid-template-columns: repeat(2, 1fr);
+		}
+	}
 
-    &__info {
-        display: grid;
-        justify-items: center;
-        align-items: center;
-    }
+	&__info {
+		display: grid;
+		justify-items: center;
+		align-items: center;
+	}
 
-    &__info--img {
-        display: flex;
-        flex-direction: column;   
-        justify-content: space-between;
-    }
+	&__info--img {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+	}
 
-    &__icon {
-        font-size: 6rem;
-        width: 120px;
-        text-align: center;
-        margin-bottom: 2.5rem;
-        transform: scale(1);
-        transition: all .3s;
-        margin-bottom: 1rem;
+	&__icon {
+		font-size: 6rem;
+		width: 120px;
+		text-align: center;
+		margin-bottom: 2.5rem;
+		transform: scale(1);
+		transition: all .3s;
+		margin-bottom: 1rem;
 
-        @include respond-590 {
-            transform: scale(.8);
-        }
-    }
+		@include respond-590 {
+			transform: scale(.8);
+		}
+	}
 
-    &__icon--yellow {
-        color: $yellow;
-    }
+	&__icon--yellow {
+		color: $yellow;
+	}
 
-    &__icon--blue {
-        color: $accent-color;
-    }
+	&__icon--blue {
+		color: $accent-color;
+	}
 
-    img {
-        width: 120px;  
-        
-        @include respond-590 {
-            margin-bottom: 40px; 
-            width: 90px;
-            margin-top: 25px;
-        }
-    }
+	img {
+		width: 120px;
 
-    &__type {
-        display: inline-block;
-        font-family: $font-tertiary;
-        font-size: .8rem;
-        font-weight: 700;
-        letter-spacing: 2px;
-        text-align: center;
-        text-transform: uppercase;
-        color: $black;
-        transition: 0.3s all;
-        position: relative;
-        top: 0;
-    }
+		@include respond-590 {
+			margin-bottom: 40px;
+			width: 90px;
+			margin-top: 25px;
+		}
+	}
 
-    &__type-span {
-        display: block;
-    }
+	img.php {
+		padding-top: 20px;
+	}
+
+	&__type {
+		display: inline-block;
+		font-family: $font-tertiary;
+		font-size: .8rem;
+		font-weight: 700;
+		letter-spacing: 2px;
+		text-align: center;
+		text-transform: uppercase;
+		color: $black;
+		transition: 0.3s all;
+		position: relative;
+		top: 0;
+	}
+
+	&__type-span {
+		display: block;
+	}
 }
 
-
+.skills__icon--img .php {
+	margin-top: 20px;
+}

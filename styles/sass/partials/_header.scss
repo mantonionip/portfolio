@@ -40,11 +40,11 @@
         @include respond-768 {
             flex-direction: row;
             top: 30px;
-            right: -77px;
+            right: -50px;
         }
 
         @include respond-480 {
-            right: -87px;
+            right: -62px;
         }
     }
 
